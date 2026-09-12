@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Metro Fitness"
+description = "A modern, conversion-focused website for Metro Fitness in Sri Lanka, featuring training programs, membership packages, gallery, Google reviews, location details, and WhatsApp enquiries."
+version = "1.0.0"
+id = "artifacts/metro-fitness"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20853
+
+[services.development]
+run = "pnpm --filter @workspace/metro-fitness run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/metro-fitness", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/metro-fitness/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20853"
+BASE_PATH = "/"

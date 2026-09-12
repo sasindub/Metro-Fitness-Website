@@ -1,6 +1,6 @@
-# [Project name]
+# Metro Fitness
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A responsive marketing website for Metro Fitness in Barigama, Sri Lanka, focused on clear membership enquiries and local discovery.
 
 ## Run & Operate
 
@@ -22,15 +22,24 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/metro-fitness/src/App.tsx` — single-page website structure, content, and interaction links
+- `artifacts/metro-fitness/src/index.css` — site tokens, typography, animation, and responsive styles
+- `artifacts/metro-fitness/public/images/` — local training and gym imagery
+- `artifacts/metro-fitness/index.html` — SEO metadata and favicon
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The first version is frontend-only; public gym information is static and verified from the supplied Google listing.
+- WhatsApp is the primary conversion path, with prefilled enquiry messages for general membership and package-specific questions.
+- Google Maps is used as the source of truth for directions and reviews; the page embeds the map and links out for the live listing.
+- Package names are enquiry-led rather than showing invented prices or unsupported offers.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+- Hero with direct WhatsApp and phone CTAs
+- Gym positioning, hours, location, gallery, membership paths, reviews, and map
+- Responsive mobile navigation and floating WhatsApp action
+- SEO metadata and reduced-motion support
 
 ## User preferences
 
